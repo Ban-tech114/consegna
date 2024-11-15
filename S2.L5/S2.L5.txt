@@ -1,0 +1,43 @@
+
+S2.L5
+
+
+- Capire cosa fa il programma senza eseguirlo:
+
+Il programma è costruito per esse un assistente virtuale che risponde alle seguenti domande:
+
+1.  la data del giorno corrente
+2. l’ora attuale
+3. il suo nome
+
+Nel caso l’utente faccia una domanda diverse da queste il programma deve rispondere con : “Non ho capito la tua domanda” e nel caso l’utente scriva “esci” il programma si interromperà lasciando un messaggio “Arrivederci”
+
+Per rispondere alle domande, il programma utilizza una libreria python chiamata datetime, si puo reperire la documentazione al seguente indirizzo:https://docs.python.org/it/3.13/library/datetime.html#
+
+- Individuare dal codice sorgente le casistiche non standard che il programma non riesce a gestire:
+1. il programma non è case sensitive non riconoscerebbe l’input giusto se si usano lettere maiuscole o minuscole in maniera diversa da come riportato sul codice
+
+- Individuare eventuali errori di sintassi o logici:
+1. Ho riscontrato un errore nel ciclo while, dopo aver dichiarato la condizione del ciclo mancano i  “:” 
+2. Ho riscontrato due errori  nel codice, il primo quando andiamo a definire la variabile oggi
+
+scrivendo oggi = datetime.datetoday() sicuramente il programma arrivati a quel punto ci darà errore poichè “date” e “today” sono due oggetti distinti della libreria datetime, si può trovare la documentazione a riguardo ai seguenti URL:
+
+https://docs.python.org/it/3.13/library/datetime.html#datetime.date
+
+https://docs.python.org/it/3.13/library/datetime.html#datetime.date.today
+
+anche in “ora_attuale” si trova un problema simile perchè si sta usando un oggetto sbagliato per ottenere l’ora attuale, sulla documentazione riporta che l’oggetto corretto per farsi restituire l’ora attuale sia datetime
+
+https://docs.python.org/it/3.13/library/datetime.html#datetime.datetime
+
+- Proporre una soluzione per ognuno di essi:
+1. Per rendere il programma case sensitive potremmo inserire una riga di codice subito dopo aver definito la funzione, assegnando alla variabile comando l’oggetto .lower quindi:
+
+comando = comando.lower()
+
+per risolvere i problemi riscontrati
+
+1.  ho aggiunto i “:” al ciclo while facendolo diventare while True:
+2. ho modificato gli oggetti della variabile oggi in questa maniera: oggi = datetime.date.today
+3. ho modificato l’oggetto della variabile ora_attuale in: ora_attuale = datetime.datetime.now()

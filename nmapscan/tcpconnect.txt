@@ -1,0 +1,21 @@
+# Nmap 7.94SVN scan initiated Wed Dec  4 21:52:18 2024 as: nmap -sT -p 1-1500 -T4 -oN tcpconnect.txt 192.168.50.101
+Nmap scan report for 192.168.50.101
+Host is up (0.0020s latency).
+Not shown: 1487 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+MAC Address: 08:00:27:88:44:EC (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Wed Dec  4 21:52:32 2024 -- 1 IP address (1 host up) scanned in 13.49 seconds
